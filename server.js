@@ -17,9 +17,10 @@ app.use(express.static("public"));
 
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds025409.mlab.com:25409/heroku_l3995dtd"
 mongoose.connect(MONGODB_URI, {
-  useMongoClient:true,
-  useNewUrlParser: true,
-  useFindAndModify: false
+  useMongoClient:true
+  // ,
+  // useNewUrlParser: true,
+  // useFindAndModify: false
 });
 
 // routes here
